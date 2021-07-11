@@ -13,6 +13,8 @@
 		CC49836B268B522100BB4AFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC498369268B522100BB4AFD /* Main.storyboard */; };
 		CC49836D268B522700BB4AFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC49836C268B522700BB4AFD /* Assets.xcassets */; };
 		CC498370268B522700BB4AFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC49836E268B522700BB4AFD /* LaunchScreen.storyboard */; };
+		CCC14909269B28E4003E92EC /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC14908269B28E4003E92EC /* Constant.swift */; };
+		CCDF54A926998743007251C9 /* CoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDF54A826998743007251C9 /* CoinData.swift */; };
 		CCE713CB26974198002397E2 /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE713CA26974198002397E2 /* Secret.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		CC49836C268B522700BB4AFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC49836F268B522700BB4AFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC498371268B522700BB4AFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCC14908269B28E4003E92EC /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		CCDF54A826998743007251C9 /* CoinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinData.swift; sourceTree = "<group>"; };
 		CCE713CA26974198002397E2 /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				CCE713CA26974198002397E2 /* Secret.swift */,
+				CCDF54A826998743007251C9 /* CoinData.swift */,
+				CCC14908269B28E4003E92EC /* Constant.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -166,8 +172,10 @@
 			files = (
 				CC498368268B522100BB4AFD /* ViewController.swift in Sources */,
 				CCE713CB26974198002397E2 /* Secret.swift in Sources */,
+				CCDF54A926998743007251C9 /* CoinData.swift in Sources */,
 				CC498364268B522100BB4AFD /* AppDelegate.swift in Sources */,
 				CC498366268B522100BB4AFD /* SceneDelegate.swift in Sources */,
+				CCC14909269B28E4003E92EC /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
