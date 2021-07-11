@@ -14,6 +14,7 @@
 		CC49836D268B522700BB4AFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC49836C268B522700BB4AFD /* Assets.xcassets */; };
 		CC498370268B522700BB4AFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC49836E268B522700BB4AFD /* LaunchScreen.storyboard */; };
 		CCC14909269B28E4003E92EC /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC14908269B28E4003E92EC /* Constant.swift */; };
+		CCC1490B269B309D003E92EC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC1490A269B309D003E92EC /* NetworkManager.swift */; };
 		CCDF54A926998743007251C9 /* CoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDF54A826998743007251C9 /* CoinData.swift */; };
 		CCE713CB26974198002397E2 /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE713CA26974198002397E2 /* Secret.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +29,7 @@
 		CC49836F268B522700BB4AFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC498371268B522700BB4AFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCC14908269B28E4003E92EC /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		CCC1490A269B309D003E92EC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CCDF54A826998743007251C9 /* CoinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinData.swift; sourceTree = "<group>"; };
 		CCE713CA26974198002397E2 /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				CC498367268B522100BB4AFD /* ViewController.swift */,
+				CCC1490A269B309D003E92EC /* NetworkManager.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				CC498368268B522100BB4AFD /* ViewController.swift in Sources */,
 				CCE713CB26974198002397E2 /* Secret.swift in Sources */,
 				CCDF54A926998743007251C9 /* CoinData.swift in Sources */,
+				CCC1490B269B309D003E92EC /* NetworkManager.swift in Sources */,
 				CC498364268B522100BB4AFD /* AppDelegate.swift in Sources */,
 				CC498366268B522100BB4AFD /* SceneDelegate.swift in Sources */,
 				CCC14909269B28E4003E92EC /* Constant.swift in Sources */,

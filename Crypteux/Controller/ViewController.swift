@@ -7,55 +7,32 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    
-    
+class ViewController: UIViewController, NetworkManagerDelegate {
+  
     @IBOutlet weak var tableView: UITableView!
+    
+    var networkManager = NetworkManager()
     
     var coinArray = [CoinData]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        networkManager.delegate = self
+        networkManager.fetchData()
+        
         tableView.delegate = self
         tableView.dataSource = self
-
-        fetchData()
     }
     
-    func fetchData() {
-        let coinURL = "\(K.coinURL)\(K.coinID)&apikey=\(API.Key)"
-        
-        if let url = URL(string: coinURL) {
-            let session = URLSession(configuration: .default)
-            
-            let task = session.dataTask(with: url) { data, response, error in
-                if error != nil {
-                    print(error!)
-                    return
-                }
-                if let safeData = data {
-                    self.parseJSON(safeData)
-                }
-            }
-            task.resume()
+    func didUpdateCoin(networkManager: NetworkManager, coin: [CoinData]) {
+        for row in coin {
+            print(row.asset_id)
         }
+        coinArray = coin
     }
     
-    func parseJSON(_ data: Data) {
-        let decoder = JSONDecoder()
-        do {
-            coinArray = try decoder.decode([CoinData].self, from: data)
-//            for row in coinArray {
-//                print(row.asset_id, row.price_usd)
-//            }
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
-        } catch {
-            print(error)
-        }
-    }
+    
 }
 
 //MARK: - UITableViewDelegate, after the cell has been tapped, this func will triggered.
