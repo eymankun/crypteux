@@ -1,5 +1,5 @@
 # crypteux
-A simple apps that shows you the current price of crypto currency.¥n
+A simple apps that shows you the current price of crypto currency.
 The api for this apps is from CoinAPI.io.
 
 ## How to use
