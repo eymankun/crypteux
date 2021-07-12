@@ -7,32 +7,35 @@
 
 import UIKit
 
-class ViewController: UIViewController, NetworkManagerDelegate {
+class ViewController: UIViewController {
   
     @IBOutlet weak var tableView: UITableView!
     
     var networkManager = NetworkManager()
-    
     var coinArray = [CoinData]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         networkManager.delegate = self
-        networkManager.fetchData()
-        
         tableView.delegate = self
         tableView.dataSource = self
+        
+        networkManager.fetchData()
     }
     
+}
+
+//MARK: - NetworkManagerDelegate, for parsing data from CoinAPI.io
+extension ViewController: NetworkManagerDelegate {
     func didUpdateCoin(networkManager: NetworkManager, coin: [CoinData]) {
-        for row in coin {
-            print(row.asset_id)
-        }
+//        for row in coin {
+//            print(row.asset_id, row.price_usd)
+//        }
+//        print(coin)
         coinArray = coin
+        tableView.reloadData()
     }
-    
-    
 }
 
 //MARK: - UITableViewDelegate, after the cell has been tapped, this func will triggered.
@@ -44,7 +47,6 @@ extension ViewController: UITableViewDelegate {
 
 //MARK: - UITableViewDataSource - to display data in the cell
 extension ViewController: UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return coinArray.count
     }

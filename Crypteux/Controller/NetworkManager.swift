@@ -16,7 +16,6 @@ struct NetworkManager {
     var delegate: NetworkManagerDelegate?
     
     func fetchData() {
-//        var coinDataArray = [CoinData]()
         let coinURL = "\(K.coinURL)\(K.coinID)&apikey=\(API.Key)"
          
         if let url = URL(string: coinURL) {
@@ -51,9 +50,6 @@ struct NetworkManager {
         let decoder = JSONDecoder()
         do {
             let coinArray = try decoder.decode([CoinData].self, from: data)
-//            for row in coinArray {
-//                print(row.asset_id, row.price_usd)
-//            }
             return coinArray
         } catch {
             print(error)
