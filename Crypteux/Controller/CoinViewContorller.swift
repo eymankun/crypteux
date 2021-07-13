@@ -41,11 +41,11 @@ extension CoinViewContorller: NetworkManagerDelegate {
 //MARK: - UITableViewDelegate, after the cell has been tapped, this func will triggered.
 extension CoinViewContorller: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("you tapped \(coinArray[indexPath.row].asset_id)")
+//        print("you tapped \(coinArray[indexPath.row].asset_id)")
         let detail = self.storyboard?.instantiateViewController(identifier: "detail") as! DetailViewController
         self.navigationController?.pushViewController(detail, animated: true)
         detail.coinType = coinArray[indexPath.row].asset_id
-        detail.coinCurrentPrice = String(format: "$%.4f", coinArray[indexPath.row].price_usd)
+        detail.coinCurrentPrice = String(format: K.dollarFourDecimalPlaces, coinArray[indexPath.row].price_usd)
         
     }
 }
@@ -58,9 +58,11 @@ extension CoinViewContorller: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let image = UIImage(named: "\(coinArray[indexPath.row].asset_id.lowercased()).png")
         
-        cell.textLabel?.text = coinArray[indexPath.row].asset_id
-        cell.detailTextLabel?.text = String(format: "$ %.4f",coinArray[indexPath.row].price_usd)
+        cell.imageView?.image = image
+        cell.textLabel?.text = String(format: K.dollarFourDecimalPlaces, coinArray[indexPath.row].price_usd)
+        cell.detailTextLabel?.text = coinArray[indexPath.row].asset_id
         return cell
     }
 }

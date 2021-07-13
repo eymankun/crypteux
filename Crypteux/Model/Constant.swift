@@ -10,4 +10,5 @@ import Foundation
 struct K {
     static let coinURL = "https://rest.coinapi.io/v1/assets?filter_asset_id="
     static let coinID = "BTC;ETH;DOGE;LTC;XRP;BNB;ADA"
+    static let dollarFourDecimalPlaces = "$%.4f"
 }

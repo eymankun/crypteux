@@ -100,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				CCE713CA26974198002397E2 /* Secret.swift */,
-				CCDF54A826998743007251C9 /* CoinData.swift */,
 				CCC14908269B28E4003E92EC /* Constant.swift */,
+				CCDF54A826998743007251C9 /* CoinData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

@@ -19,8 +19,8 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        coinLabel.text = coinType
-        coinPrice.text = coinCurrentPrice
+        coinLabel.text = coinCurrentPrice
+        coinPrice.text = coinType
     }
     
 
