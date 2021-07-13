@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		CC498364268B522100BB4AFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC498363268B522100BB4AFD /* AppDelegate.swift */; };
 		CC498366268B522100BB4AFD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC498365268B522100BB4AFD /* SceneDelegate.swift */; };
-		CC498368268B522100BB4AFD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC498367268B522100BB4AFD /* ViewController.swift */; };
+		CC498368268B522100BB4AFD /* CoinViewContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC498367268B522100BB4AFD /* CoinViewContorller.swift */; };
 		CC49836B268B522100BB4AFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC498369268B522100BB4AFD /* Main.storyboard */; };
 		CC49836D268B522700BB4AFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC49836C268B522700BB4AFD /* Assets.xcassets */; };
 		CC498370268B522700BB4AFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC49836E268B522700BB4AFD /* LaunchScreen.storyboard */; };
+		CC6DEB65269C7E37002C7C9E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6DEB64269C7E36002C7C9E /* DetailViewController.swift */; };
 		CCC14909269B28E4003E92EC /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC14908269B28E4003E92EC /* Constant.swift */; };
 		CCC1490B269B309D003E92EC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC1490A269B309D003E92EC /* NetworkManager.swift */; };
 		CCDF54A926998743007251C9 /* CoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDF54A826998743007251C9 /* CoinData.swift */; };
@@ -23,11 +24,12 @@
 		CC498360268B522100BB4AFD /* Crypteux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crypteux.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC498363268B522100BB4AFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC498365268B522100BB4AFD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CC498367268B522100BB4AFD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC498367268B522100BB4AFD /* CoinViewContorller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinViewContorller.swift; sourceTree = "<group>"; };
 		CC49836A268B522100BB4AFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC49836C268B522700BB4AFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC49836F268B522700BB4AFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC498371268B522700BB4AFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC6DEB64269C7E36002C7C9E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CCC14908269B28E4003E92EC /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		CCC1490A269B309D003E92EC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CCDF54A826998743007251C9 /* CoinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinData.swift; sourceTree = "<group>"; };
@@ -87,8 +89,9 @@
 		CCC9A4932690AA7700C8CE6E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CC498367268B522100BB4AFD /* ViewController.swift */,
+				CC498367268B522100BB4AFD /* CoinViewContorller.swift */,
 				CCC1490A269B309D003E92EC /* NetworkManager.swift */,
+				CC6DEB64269C7E36002C7C9E /* DetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -173,13 +176,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC498368268B522100BB4AFD /* ViewController.swift in Sources */,
+				CC498368268B522100BB4AFD /* CoinViewContorller.swift in Sources */,
 				CCE713CB26974198002397E2 /* Secret.swift in Sources */,
 				CCDF54A926998743007251C9 /* CoinData.swift in Sources */,
 				CCC1490B269B309D003E92EC /* NetworkManager.swift in Sources */,
 				CC498364268B522100BB4AFD /* AppDelegate.swift in Sources */,
 				CC498366268B522100BB4AFD /* SceneDelegate.swift in Sources */,
 				CCC14909269B28E4003E92EC /* Constant.swift in Sources */,
+				CC6DEB65269C7E37002C7C9E /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CoinViewContorller: UIViewController {
   
     @IBOutlet weak var tableView: UITableView!
     
@@ -27,7 +27,7 @@ class ViewController: UIViewController {
 }
 
 //MARK: - NetworkManagerDelegate, for parsing data from CoinAPI.io
-extension ViewController: NetworkManagerDelegate {
+extension CoinViewContorller: NetworkManagerDelegate {
     func didUpdateCoin(networkManager: NetworkManager, coin: [CoinData]) {
 //        for row in coin {
 //            print(row.asset_id, row.price_usd)
@@ -39,14 +39,19 @@ extension ViewController: NetworkManagerDelegate {
 }
 
 //MARK: - UITableViewDelegate, after the cell has been tapped, this func will triggered.
-extension ViewController: UITableViewDelegate {
+extension CoinViewContorller: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("you tapped me")
+        print("you tapped \(coinArray[indexPath.row].asset_id)")
+        let detail = self.storyboard?.instantiateViewController(identifier: "detail") as! DetailViewController
+        self.navigationController?.pushViewController(detail, animated: true)
+        detail.coinType = coinArray[indexPath.row].asset_id
+        detail.coinCurrentPrice = String(format: "$%.4f", coinArray[indexPath.row].price_usd)
+        
     }
 }
 
 //MARK: - UITableViewDataSource - to display data in the cell
-extension ViewController: UITableViewDataSource {
+extension CoinViewContorller: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return coinArray.count
     }
