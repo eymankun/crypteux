@@ -14,6 +14,8 @@
 		CC49836D268B522700BB4AFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC49836C268B522700BB4AFD /* Assets.xcassets */; };
 		CC498370268B522700BB4AFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC49836E268B522700BB4AFD /* LaunchScreen.storyboard */; };
 		CC6DEB65269C7E37002C7C9E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6DEB64269C7E36002C7C9E /* DetailViewController.swift */; };
+		CC71FC1826A077380014FC31 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC71FC1626A077380014FC31 /* CustomTableViewCell.swift */; };
+		CC71FC1926A077380014FC31 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC71FC1726A077380014FC31 /* CustomTableViewCell.xib */; };
 		CCC14909269B28E4003E92EC /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC14908269B28E4003E92EC /* Constant.swift */; };
 		CCC1490B269B309D003E92EC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC1490A269B309D003E92EC /* NetworkManager.swift */; };
 		CCDF54A926998743007251C9 /* CoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDF54A826998743007251C9 /* CoinData.swift */; };
@@ -30,6 +32,8 @@
 		CC49836F268B522700BB4AFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC498371268B522700BB4AFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC6DEB64269C7E36002C7C9E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CC71FC1626A077380014FC31 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		CC71FC1726A077380014FC31 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		CCC14908269B28E4003E92EC /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		CCC1490A269B309D003E92EC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CCDF54A826998743007251C9 /* CoinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinData.swift; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 		CCC9A4922690AA6D00C8CE6E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CC71FC1726A077380014FC31 /* CustomTableViewCell.xib */,
 				CC498369268B522100BB4AFD /* Main.storyboard */,
 			);
 			path = View;
@@ -90,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				CC498367268B522100BB4AFD /* CoinViewContorller.swift */,
+				CC71FC1626A077380014FC31 /* CustomTableViewCell.swift */,
 				CCC1490A269B309D003E92EC /* NetworkManager.swift */,
 				CC6DEB64269C7E36002C7C9E /* DetailViewController.swift */,
 			);
@@ -165,6 +171,7 @@
 			files = (
 				CC498370268B522700BB4AFD /* LaunchScreen.storyboard in Resources */,
 				CC49836D268B522700BB4AFD /* Assets.xcassets in Resources */,
+				CC71FC1926A077380014FC31 /* CustomTableViewCell.xib in Resources */,
 				CC49836B268B522100BB4AFD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC71FC1826A077380014FC31 /* CustomTableViewCell.swift in Sources */,
 				CC498368268B522100BB4AFD /* CoinViewContorller.swift in Sources */,
 				CCE713CB26974198002397E2 /* Secret.swift in Sources */,
 				CCDF54A926998743007251C9 /* CoinData.swift in Sources */,

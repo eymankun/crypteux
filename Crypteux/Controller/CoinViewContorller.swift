@@ -20,8 +20,14 @@ class CoinViewContorller: UIViewController {
         networkManager.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
+        registerTableViewCell()
         
         networkManager.fetchData()
+    }
+    
+    private func registerTableViewCell() {
+        let customCoinCell = UINib(nibName: "CustomTableViewCell", bundle: nil)
+        self.tableView.register(customCoinCell, forCellReuseIdentifier: "customCell")
     }
     
 }
@@ -57,12 +63,15 @@ extension CoinViewContorller: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomTableViewCell
         let image = UIImage(named: "\(coinArray[indexPath.row].asset_id.lowercased()).png")
         
-        cell.imageView?.image = image
-        cell.textLabel?.text = String(format: K.dollarFourDecimalPlaces, coinArray[indexPath.row].price_usd)
-        cell.detailTextLabel?.text = coinArray[indexPath.row].asset_id
+//        cell.imageView?.image = image
+//        cell.textLabel?.text = String(format: K.dollarFourDecimalPlaces, coinArray[indexPath.row].price_usd)
+//        cell.detailTextLabel?.text = coinArray[indexPath.row].asset_id
+        cell.iconImage.image = image
+        cell.coinPrice.text = String(format: K.dollarFourDecimalPlaces, coinArray[indexPath.row].price_usd)
+        cell.coinAbbrev.text = coinArray[indexPath.row].asset_id
         return cell
     }
 }
